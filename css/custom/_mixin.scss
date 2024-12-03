@@ -1,0 +1,66 @@
+@mixin scroll ($background, $color, $width, $border, $hover) {
+
+    &::-webkit-scrollbar{ width: $width; }
+    &::-webkit-scrollbar-track{ background: $background; }
+    &::-webkit-scrollbar-thumb{ background: $color; border-radius: $border; }
+    @if ( $hover == 1 ) {
+        &::-webkit-scrollbar-thumb { background: none; }
+        &:hover{ &::-webkit-scrollbar-thumb{ background: $color; } }
+    }
+    @else {
+        &::-webkit-scrollbar-thumb { background: $color; }
+    }
+}
+@mixin rows ($number, $line_height) {
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $number;
+    line-height: $line_height;
+    max-height: $number * $line_height;
+
+}
+@mixin loader ($background, $width, $border) {
+
+    --bd: #{$border};
+    --n: 10;
+    --g: 1deg;
+    width: #{$width};
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000, $background) content-box;
+    -webkit-mask:
+        repeating-conic-gradient(#0000 0deg,
+            #000 1deg calc(360deg/var(--n) - var(--g) - 1deg),
+            #0000     calc(360deg/var(--n) - var(--g)) calc(360deg/var(--n))),
+        radial-gradient(farthest-side,#0000 calc(98% - var(--bd)),#000 calc(100% - var(--bd)));
+            mask:
+        repeating-conic-gradient(#0000 0deg,
+            #000 1deg calc(360deg/var(--n) - var(--g) - 1deg),
+            #0000     calc(360deg/var(--n) - var(--g)) calc(360deg/var(--n))),
+        radial-gradient(farthest-side,#0000 calc(98% - var(--bd)),#000 calc(100% - var(--bd)));
+    -webkit-mask-composite: destination-in;
+            mask-composite: intersect;
+    animation: load .5s infinite steps(var(--n));
+    
+    @keyframes load { to{ transform: rotate(1turn) } }
+
+}
+@mixin media ($point){
+
+    @if $point == big {
+        @media (max-width: 1200px) {  @content; }
+    }
+    @if $point == large {
+        @media (max-width: 1025px) {  @content; }
+    }
+    @if $point == mobile {
+        @media (max-width: 600px) { @content; }
+    }
+    @if $point == small {
+        @media (max-width: 420px) { @content; }
+    }
+}

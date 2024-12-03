@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.no-select, .go-icon, img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.layer {
+  position: relative;
+}
+.layer::after {
+  content: "";
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-space {
+  justify-content: space-between;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.auto-margin {
+  margin: auto;
+}
+
+.auto-height {
+  display: block;
+  height: auto;
+  max-height: auto;
+  text-overflow: clip;
+}
+
+.auto-width {
+  width: auto;
+  max-width: auto;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.over-hide {
+  overflow: hidden;
+}
+
+.all-over-hide {
+  overflow: hidden;
+}
+.all-over-hide * {
+  overflow: hidden;
+}
+
+.over-show {
+  overflow: visible;
+}
+
+.overx-hide {
+  overflow-x: hidden;
+}
+
+.overy-hide {
+  overflow-y: hidden;
+}
+
+.over-auto {
+  overflow: auto;
+}
+
+.overx-auto {
+  overflow-x: auto;
+}
+
+.overy-auto {
+  overflow-y: auto;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+}
+
+.clip {
+  text-overflow: clip;
+}
+
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.no-letter-space {
+  letter-spacing: normal;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.no-visible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-margin {
+  margin: right;
+}
+
+.left-margin {
+  margin: left;
+}
+
+.default {
+  cursor: default;
+}
+
+.no-back {
+  background: none;
+}
+
+.block {
+  display: block;
+}
+
+.reverse-row {
+  flex-direction: row-reverse;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.wizard > .steps .current-info, .wizard > .steps .number {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title-1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.title-2 {
+  font-size: 12px;
+}
+
+.title-3 {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.section-1 {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.section-1 input {
+  margin: 8px;
+}
+.section-1 .btn {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  background: none;
+  margin: 8px auto;
+  color: #000;
+}
+
+.section-2 {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.section-2 input {
+  margin: 8px;
+  padding: 10px;
+}
+.section-2 .form-check-input:checked {
+  background-color: rgb(255, 220, 130) !important;
+  border: none !important;
+  color: #333 !important;
+}
+.section-2 .form-check {
+  border: 1px solid #e5e5e5;
+  padding: 15px 30px;
+  background-color: #fff8e6;
+}
+.section-2 .form-check:checked {
+  background-color: #fff8e6;
+}
+.section-2 .form-check .form-check-label {
+  font-size: 16px;
+  font-weight: bold;
+}
+.section-2 .form-check span {
+  font-size: 12px;
+  color: #333;
+}
+
+.form-control:focus {
+  border-color: #f3d4b7;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #000;
+  font-size: 13px;
+}
+
+.form-control::-moz-placeholder {
+  color: #000;
+  font-size: 13px;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #000;
+  font-size: 13px;
+}
+
+.form-control:-moz-placeholder {
+  color: #000;
+  font-size: 13px;
+}
+
+.details-bank {
+  font-size: 18px;
+  font-weight: 900;
+  color: #000;
+  margin-top: 14px;
+}
+
+.dropdown {
+  list-style: none !important;
+}
+
+.dropdown button {
+  width: 100%;
+  border: 1px solid black;
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 12px;
+}
+
+.dropdown button .arrow-icon {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+.steps {
+  margin-bottom: 30px;
+}
+.steps ul {
+  display: flex;
+  position: relative;
+}
+.steps ul li {
+  width: 80.16%;
+  margin-right: 10px;
+}
+.steps ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background: #e6e6e6;
+  margin-left: -30px;
+  border-radius: 3.5px;
+}
+.steps ul li.first a, .steps ul li.checked a {
+  background: rgb(255, 220, 130);
+  transition: all 0.5s ease;
+}
+
+.actions li a {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 220, 130);
+  margin-top: 15px;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  font-weight: 400;
+}
+.actions li a:before {
+  content: "\f2ee";
+  position: absolute;
+  top: 19px;
+  right: 41px;
+  font-family: Material-Design-Iconic-Font;
+  transform: translateZ(0);
+}
+.actions li a:hover {
+  background: #d9bda3;
+}
+.actions li a:hover:before {
+  animation-name: hvr-icon-wobble-horizontal;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+.actions li[aria-disabled=true] a {
+  display: none;
+}
+.actions li:first-child a {
+  display: none;
+}
+.actions li:first-child a:before {
+  content: "\f2ea";
+  left: 26px;
+}
+.actions li:first-child a:hover {
+  background: #ccc;
+}
+.actions li:last-child a {
+  padding-left: 29px;
+  width: 167px;
+  font-weight: 400;
+}
+.actions li:last-child a:before {
+  right: 30px;
+}
+
+.sub-title {
+  position: absolute;
+  top: 120px;
+  font-size: 12px;
+}
+@keyframes hvr-icon-wobble-horizontal {
+  16.65% {
+    transform: translateX(6px);
+  }
+  33.3% {
+    transform: translateX(-5px);
+  }
+  49.95% {
+    transform: translateX(4px);
+  }
+  66.6% {
+    transform: translateX(-2px);
+  }
+  83.25% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@media (max-width: 1500px) {
+  .wrapper {
+    height: auto;
+  }
+}
+@media (max-width: 1199px) {
+  .wrapper {
+    height: 100vh;
+  }
+  #wizard {
+    margin-right: 40px;
+    min-height: 829px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 991px) {
+  .wrapper {
+    justify-content: center;
+  }
+  .wrapper .image-holder {
+    display: none;
+  }
+  .wrapper form {
+    width: 60%;
+  }
+  #wizard {
+    margin-right: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .wrapper {
+    height: auto;
+    display: block;
+  }
+  .wrapper .image-holder {
+    width: 100%;
+    display: block;
+  }
+  .wrapper form {
+    width: 100%;
+  }
+  #wizard {
+    min-height: unset;
+    padding: 70px 20px 40px;
+  }
+  .form-row.form-group {
+    display: block;
+  }
+  .form-row.form-group .form-holder {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+  .item .purchase {
+    margin-left: 11px;
+  }
+}
+@media (max-width: 500px) {
+  .sub-title {
+    display: none !important;
+  }
+  .actions ul {
+    padding: 0px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
